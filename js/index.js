@@ -39,4 +39,82 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+// next 2 images in the document
+let callToActionImage = document.getElementById("cta-img");
+callToActionImage.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let middleImage = document.getElementById("middle-img");
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+//navigation text 
+const navigationLinks = document.querySelectorAll('nav a');
+navigationLinks[0].textContent = 'Services';
+navigationLinks[1].textContent = 'Product';
+navigationLinks[2].textContent = 'Vision';
+navigationLinks[3].textContent = 'Features';
+navigationLinks[4].textContent = 'About';
+navigationLinks[5].textContent = 'Contact';
+
+
+// used to append and prepend new a tags in the nav tag
+const newNavLinks = document.querySelector('nav');
+
+const newNavOne = document.createElement('a');
+newNavOne.textContent = 'Clouds';
+const newNavTwo = document.createElement('a');
+newNavTwo.textContent = 'Ocean';
+
+newNavLinks.appendChild(newNavOne);
+newNavLinks.prepend(newNavTwo);
+
+
+
+// GREEN nav a COLOR CHANGER
+const navigationLinksColor = document.querySelectorAll('a');
+navigationLinksColor.forEach( itemplaceholder => itemplaceholder.style.color = 'green');
+
+
+
+//const callToActionText = document.querySelector('.cta-text h1');
+//callToActionText.textContent = siteContent["cta"]["h1"];
+
+document.querySelector('.cta-text h1').innerHTML = 'DOM<br> IS<br> AWESOME';
+
+const callToActionButton = document.querySelector('.cta-text button');
+callToActionButton.textContent = siteContent["cta"]["button"];
+
+// TOP CONTENT 
+const topContentH4 = document.querySelectorAll('.top-content h4');
+topContentH4[0].textContent = siteContent["main-content"]["features-h4"];
+topContentH4[1].textContent = siteContent["main-content"]["about-h4"];
+
+const topContentPara = document.querySelectorAll('.top-content p');
+topContentPara[0].textContent = siteContent["main-content"]["features-content"];
+topContentPara[1].textContent = siteContent["main-content"]["about-content"];
+topContentPara[0].style.margin ='0 5% 0 0';
+
+
+const bottomContentH4 = document.querySelectorAll('.bottom-content h4');
+bottomContentH4[0].textContent = siteContent["main-content"]["services-h4"];
+bottomContentH4[1].textContent = siteContent["main-content"]["product-h4"];
+bottomContentH4[2].textContent = siteContent["main-content"]["vision-h4"];
+
+const bottomContentPara = document.querySelectorAll('.bottom-content p');
+bottomContentPara[0].textContent = siteContent["main-content"]["services-content"];
+bottomContentPara[1].textContent = siteContent["main-content"]["product-content"];
+bottomContentPara[2].textContent = siteContent["main-content"]["vision-content"];
+bottomContentPara[2].style.padding ='0 2% 0 0';
+
+const contactH4 = document.querySelector('.contact h4');
+contactH4.textContent = siteContent["contact"]["contact-h4"];
+
+const contactPara = document.querySelectorAll('.contact p');
+contactPara[0].innerHTML = '123 Way 456 Street<br> Somewhere, USA';
+contactPara[1].textContent = siteContent["contact"]["phone"];
+contactPara[2].textContent = siteContent["contact"]["email"];
+
+document.querySelector('footer p').textContent = siteContent["footer"]["copyright"];
+
+
